@@ -1,0 +1,42 @@
+.Fyps-list{
+    padding: 0% 5%;
+    margin-top: 1%;
+    z-index: 5;
+
+}
+
+.searchBar{
+    width: 100%;
+}
+
+.searchFYPs{
+    width: 90%;
+    border: 1px solid;
+}
+
+.Fyps-list table th{
+    background-color: #2596be;
+    color: #fff;
+    padding: 1%;
+    vertical-align: middle;
+    align-items: center;
+}
+
+.Fyps-list table{
+    border: #2596be 1px solid;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.Fyps-list table tr a{
+    color: #000;
+    text-decoration: none;
+}
+
+.Fyps-list table tr a:hover{
+    color: #2596be;
+}
+
+.navbarFYPs{
+    z-index: 5;
+}

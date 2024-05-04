@@ -2,7 +2,7 @@
 
 const express = require('express');
 const router = express.Router();
-const User = require('../models/User'); // Assuming you have a User model
+const {User,Project} = require('../models/User'); // Assuming you have a User model
 const bcrypt = require('bcrypt');
 
 

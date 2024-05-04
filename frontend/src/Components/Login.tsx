@@ -3,10 +3,10 @@ import Form from "react-bootstrap/Form";
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-
+import logo from '../assets/logo.png';
 import "bootstrap/dist/css/bootstrap.min.css";
 
-const Login = () => {
+const Login = ({ handleUserData }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -23,6 +23,7 @@ const Login = () => {
       .then((res) => {
         console.log(res);
         console.log(res.data.user.role);
+        handleUserData(res.data.user); // Pass user data to parent component
         navigate("/home",{ state: { user: res.data.user } });
       })
       .catch((err) => {
@@ -50,7 +51,7 @@ const Login = () => {
         <div className="loginSideImage"></div>
 
         <div className="loginRightSide">
-          <img src="./assets/logo.png" alt="fastlogo" />
+          {/* <img src={logo} width='250px' alt="fastlogo" /> */}
           <div className="loginTitle">
             <h1>FYP PORTAL</h1>
           </div>

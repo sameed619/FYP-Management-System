@@ -22,6 +22,8 @@ width: 100%;
     min-height: 470px;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    z-index: 3;
 }
 
 h3{
@@ -30,9 +32,59 @@ h3{
 
 .card{
     margin: 15px;
-    width: 30%;
+    width: 44%;
     padding: 14px;
     height: 200px;
-    border: 1px solid;
     float: left;
+}
+
+.titleCard{
+    width: 90%;
+}
+
+#titleFYP{
+    font-size: 30px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#titleProj{
+    width: 100%;
+    background-color: #2596be;
+    color: #fff;
+    height: 30%;
+    padding: 1%;
+}
+
+.card2{
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 20px;
+}
+
+.card2 p{
+    margin: 2px;
+}
+
+#supervisorName{
+
+    font-size: 25px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#SupvsrTitle{
+    width: 100%;
+    background-color: #2596be;
+    color: #fff;
+    height: 30%;
+    padding: 2%;
+}
+
+#GroupTitle{
+    width: 100%;
+    background-color: #2596be;
+    color: #fff;
+    height: 30%;
+    padding: 2%;
 }

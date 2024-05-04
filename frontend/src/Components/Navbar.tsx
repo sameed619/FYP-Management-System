@@ -4,6 +4,7 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import "./Navbar.css";
+import { Link } from "react-router-dom";
 
 const NavbarMenu = () => {
   const expand = "false";
@@ -15,15 +16,16 @@ const NavbarMenu = () => {
           expand={expand}
           variant="dark"
           className="bg-body-tertiary  mb-3 navMain"
+          sticky="top" 
+          z-index-n1 
         >
           <Container fluid className="navContainer">
-            <Navbar.Brand  href="#">FYP PORTAL</Navbar.Brand>
-            <Navbar.Toggle  aria-controls={`offcanvasNavbar-expand-${expand}`} />
+            <Navbar.Brand href="#">FYP PORTAL</Navbar.Brand>
+            <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
             <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-${expand}`}
               aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
               placement="start"
-              
             >
               <Offcanvas.Header closeButton>
                 <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
@@ -32,9 +34,19 @@ const NavbarMenu = () => {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                  <Nav.Link href="#action1">Home</Nav.Link>
-                  <Nav.Link href="#action2">Link</Nav.Link>
-                  <NavDropdown
+                  <Nav.Link as={Link} to="/home">
+                    Home
+                  </Nav.Link>
+                  <Nav.Link as={Link} to="/proposalSubmission">
+                    Proposal Submission
+                  </Nav.Link>
+                  <Nav.Link as={Link} to="/pastFYP">
+                    Past FYP List
+                  </Nav.Link>
+                  <Nav.Link as={Link} to="/submitReport">
+                    Submit Report
+                  </Nav.Link>
+                  {/* <NavDropdown
                     title="Dropdown"
                     id={`offcanvasNavbarDropdown-expand-${expand}`}
                   >
@@ -46,7 +58,7 @@ const NavbarMenu = () => {
                     <NavDropdown.Item href="#action5">
                       Something else here
                     </NavDropdown.Item>
-                  </NavDropdown>
+                  </NavDropdown> */}
                 </Nav>
               </Offcanvas.Body>
             </Navbar.Offcanvas>

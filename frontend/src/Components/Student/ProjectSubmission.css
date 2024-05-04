@@ -1,0 +1,74 @@
+.Div-ProposalSubmission{
+    width: 1355px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: absolute;
+    top: 12%;
+    min-height: 535px;
+}
+
+.title-ProposalSubmission{
+font-size:11px;
+padding: 1%;
+width: 100%;
+text-align: center;
+
+}
+
+.content-ProposalSubmission{
+    width: 100%;
+    position: absolute;
+    top: 12%;
+    min-height: 470px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+h3{
+    font-size: 22px;
+}
+
+.card-ProposalSubmission{
+    margin: 15px;
+    width: 65%;
+    padding: 2%;
+    min-height: 400px;
+    float: left;
+}
+
+
+#Submit-ProposalSubmission{
+    background-color: #2596be;
+    color: #fff;
+    padding: 1%;
+}
+
+#Submit-ProposalSubmission:hover{
+    background-color: #fff;
+    color: #000;
+    padding: 1%;
+}
+
+.successMessage-ProposalSubmission{
+    height: 450px;
+    align-items: center;
+}
+
+.ProposalSuccessMessage{
+    color: #095;
+}
+
+.ProposalFailedMessage{
+    color: #f00;
+
+}
+.successMessage-ProposalSubmission p{
+    font-size: larger;
+    width: 50%;
+    text-align: center;
+    padding: 2%;
+    border: 1px solid #000 ;
+}
