@@ -1,0 +1,27 @@
+
+.navMain{
+    width: 100%;
+    width: 100%;
+    background-color: #2596be;
+    padding-top: 0px;
+    z-index: -1;
+}
+
+.navDiv{
+    position: fixed;
+    top: 0;
+    width: 1360px;
+    height: 60px;
+    margin-top: 0px;
+    padding-top: 0px;
+    z-index: 0;
+
+}
+
+.navContainer{
+    background-color: #2596be;
+    color: #fff;
+    height: 70px;
+    padding: 15px 30px;
+}
+

@@ -1,4 +1,4 @@
-import NavbarMenu from "../Navbar";
+import NavbarMenu from "./Navbar";
 import "./ReportSubmission.css";
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
@@ -9,12 +9,17 @@ const ReportWeekly = ({ _id, email, password, role }) => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [reportFile, setreportFile] = useState("");
+  const [status_Check, setStatus] = useState("");
+  const [form_Submitted, setFormStatus] = useState("");
+
   const user = _id;
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     console.log("------- IN HANDLE SUBMIT FUNCTION ------------");
+
+    setFormStatus(true);
 
     try {
       console.log("Report Title: ", title);
@@ -31,12 +36,11 @@ const ReportWeekly = ({ _id, email, password, role }) => {
 
       console.log("FORM DATA TO SEND: ", dataToSend);
 
-      var status_Check;
-
       axios
         .post("http://localhost:4000/submitReport/submitForm/", dataToSend)
         .then((response) => {
-          status_Check = response.data.status_Check;
+          setStatus(response.data.status_Check);
+
           console.log("Status: ", status_Check);
 
           // Handle response data
@@ -45,48 +49,53 @@ const ReportWeekly = ({ _id, email, password, role }) => {
           console.error("Error:", error);
           // Handle error
         });
+
+      ////////////////////
     } catch (error) {
       console.error("Error submitting form:", error);
     }
 
-    const FormElement = document.getElementsByClassName(
-      "card-ReportSubmission"
-    );
-    const ArrFormelement = Array.from(FormElement);
+    if (form_Submitted) {
+      const FormElement = document.getElementsByClassName(
+        "card-ReportSubmission"
+      );
+      const ArrFormelement = Array.from(FormElement);
 
-    ArrFormelement.forEach((element) => {
-      element.remove();
-    });
-
-    const pElem = document.createElement("p");
-    console.log("Status 2: ", status_Check);
-
-    if (status_Check === true) {
-      pElem.textContent = "Report Submitted Successfully!";
-      pElem.className = "ReportSuccessMessage";
-    } else {
-      pElem.textContent = "Report for this week Already Submitted!";
-      pElem.className = "ReportFailedMessage";
-    }
-
-    const succDiv = Array.from(
-      document.getElementsByClassName("successMessage-ReportSubmission")
-    );
-
-    const hasPTags = succDiv.some(
-      (element) => element.querySelector("p") !== null
-    );
-
-    if (!hasPTags) {
-      succDiv.forEach((element) => {
-        element.append(pElem);
+      ArrFormelement.forEach((element) => {
+        element.remove();
       });
+
+      console.log("Status 2: ", status_Check);
+
+      const pElem = document.createElement("p");
+
+      if (status_Check === true) {
+        pElem.textContent = "Report Submitted Successfully!";
+        pElem.className = "ReportSuccessMessage";
+      } else {
+        pElem.textContent = "Report for this week Already Submitted!";
+        pElem.className = "ReportFailedMessage";
+      }
+
+      const succDiv = Array.from(
+        document.getElementsByClassName("successMessage-ReportSubmission")
+      );
+
+      const hasPTags = succDiv.some(
+        (element) => element.querySelector("p") !== null
+      );
+
+      if (!hasPTags) {
+        succDiv.forEach((element) => {
+          element.append(pElem);
+        });
+      }
     }
   };
 
   return (
     <>
-      <NavbarMenu />
+      <NavbarMenu _id={_id} email={email} role={role} />
 
       <div className="Div-ReportSubmission">
         <div className="title-ReportSubmission">

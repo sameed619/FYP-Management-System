@@ -1,0 +1,74 @@
+.Div-GroupAdd{
+    width: 1355px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: absolute;
+    top: 12%;
+    min-height: 535px;
+}
+
+.title-GroupAdd{
+font-size:11px;
+padding: 1%;
+width: 100%;
+text-align: center;
+
+}
+
+.content-GroupAdd{
+    width: 100%;
+    position: absolute;
+    top: 12%;
+    min-height: 470px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+h3{
+    font-size: 22px;
+}
+
+.card-GroupAdd{
+    margin: 15px;
+    width: 65%;
+    padding: 2%;
+    min-height: 400px;
+    float: left;
+}
+
+
+#Submit-GroupAdd{
+    background-color: #2596be;
+    color: #fff;
+    padding: 1%;
+}
+
+#Submit-GroupAdd:hover{
+    background-color: #fff;
+    color: #000;
+    padding: 1%;
+}
+
+.successMessage-GroupAdd{
+    height: 450px;
+    align-items: center;
+}
+
+.GroupSuccessMessage{
+    color: #095;
+}
+
+.GroupFailedMessage{
+    color: #f00;
+
+}
+.successMessage-GroupAdd p{
+    font-size: larger;
+    width: 50%;
+    text-align: center;
+    padding: 2%;
+    border: 1px solid #000 ;
+}

@@ -4,8 +4,7 @@ import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import axios from "axios";
 
-
-const Home = ({ _id, email, password, role }) => {
+const StudentHome = ({ _id, email, password, role }) => {
   const [userData, setUserData] = useState({});
   const [data, setData] = useState({});
 
@@ -66,7 +65,8 @@ const Home = ({ _id, email, password, role }) => {
 
   return (
     <>
-      <NavbarMenu />
+      <NavbarMenu _id={_id} email={email} role={role} />
+
       <div className="HomeDiv">
         <div className="titleHome">
           <h1>Dashboard </h1>
@@ -92,4 +92,4 @@ const Home = ({ _id, email, password, role }) => {
   );
 };
 
-export default Home;
+export default StudentHome;

@@ -47,4 +47,36 @@ const ReportSubmitted = new mongoose.Schema({
 
 const Report = mongoose.model('Report', ReportSubmitted); 
 
-module.exports = {User,Project,Proposal,Report};
+const documentSchema = new mongoose.Schema({
+  filename: {
+    type: String,
+    required: true,
+  },
+  filePath: {
+    type: String,
+    required: true,
+  },
+  userId: {
+    type: mongoose.Schema.Types.ObjectId, 
+    ref: 'User', 
+    required: true,
+  },
+});
+
+const Document = mongoose.model('Document', documentSchema);
+
+const supervisors = new mongoose.Schema({
+  name: {
+    type: String,
+    required: true,
+  },
+  email: {
+    type: String,
+    required: true,
+  }
+
+})
+
+const Supervisor = mongoose.model('Supervisor',supervisors);
+
+module.exports = {User,Project,Proposal,Report,Document,Supervisor};

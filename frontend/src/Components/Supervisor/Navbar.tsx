@@ -9,6 +9,8 @@ import { Link } from "react-router-dom";
 const NavbarMenu = () => {
   const expand = "false";
 
+  console.log("----- IN Navbar ------  ");
+
   return (
     <>
       <div className="navDiv">
@@ -16,8 +18,8 @@ const NavbarMenu = () => {
           expand={expand}
           variant="dark"
           className="bg-body-tertiary  mb-3 navMain"
-          sticky="top" 
-          z-index-n1 
+          sticky="top"
+          z-index-n1
         >
           <Container fluid className="navContainer">
             <Navbar.Brand href="#">FYP PORTAL</Navbar.Brand>
@@ -34,18 +36,16 @@ const NavbarMenu = () => {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                  <Nav.Link as={Link} to="/home">
+                  <Nav.Link as={Link} to="/SupervisorHome">
                     Home
                   </Nav.Link>
-                  <Nav.Link as={Link} to="/proposalSubmission">
-                    Proposal Submission
+                  <Nav.Link as={Link} to="/AddGroup">
+                    Add Groups
                   </Nav.Link>
-                  <Nav.Link as={Link} to="/pastFYP">
-                    Past FYP List
+                  <Nav.Link as={Link} to="/assignedGroups">
+                    Assigned Groups
                   </Nav.Link>
-                  <Nav.Link as={Link} to="/submitReport">
-                    Submit Report
-                  </Nav.Link>
+
                   {/* <NavDropdown
                     title="Dropdown"
                     id={`offcanvasNavbarDropdown-expand-${expand}`}

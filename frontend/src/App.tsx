@@ -1,11 +1,15 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import React, { useState } from "react";
 import Login from "./Components/Login";
-import Home from "./Components/Home";
+import StudentHome from "./Components/Student/StudentHome";
+import SupervisorHome from "./Components/Supervisor/SupervisorHome";
 import ProjectSubmission from "./Components/Student/ProjectSubmission";
 import PastFYPs from "./Components/Student/PastFYPs";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ReportWeekly from "./Components/Student/ReportWeekly";
+import DocumentRepository from "./Components/Student/DocumentRepository";
+import AddGroup from "./Components/Supervisor/AddGroup";
+import GroupsAssigned from "./Components/Supervisor/GroupsAssigned";
 
 function App() {
   const [userData, setUserData] = useState(null);
@@ -20,15 +24,30 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Login handleUserData={handleUserData} />} />
-          <Route path="/home" element={<Home {...userData} />} />
+          <Route path="/StudentHome" element={<StudentHome {...userData} />} />
+          <Route
+            path="/SupervisorHome"
+            element={<SupervisorHome {...userData} />}
+          />
           <Route
             path="/proposalSubmission"
             element={<ProjectSubmission {...userData} />}
           />
-          <Route path="/pastFYP" element={<PastFYPs />} />
+          <Route path="/pastFYP" element={<PastFYPs {...userData} />} />
           <Route
             path="/submitReport"
             element={<ReportWeekly {...userData} />}
+          />
+          <Route
+            path="/doctRepost"
+            element={<DocumentRepository {...userData} />}
+          />
+
+          <Route path="/AddGroup" element={<AddGroup {...userData} />} />
+
+          <Route
+            path="/assignedGroups"
+            element={<GroupsAssigned {...userData} />}
           />
         </Routes>
       </BrowserRouter>

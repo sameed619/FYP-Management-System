@@ -1,0 +1,77 @@
+Login.tsx:24 {data: {…}, status: 200, statusText: 'OK', headers: AxiosHeaders, config: {…}, …}
+Login.tsx:25 student
+App.tsx:12 Received user data in App: {_id: '663361945e8efc55b1ed5eec', email: 'irtiqa@gmail.com', password: 'hello', role: 'student'}
+Home.tsx:15 Props User Data:  {props: {…}}
+Home.tsx:16 Props Data:  undefined
+Home.tsx:17 {_id: '663361945e8efc55b1ed5eec', email: 'irtiqa@gmail.com', password: 'hello', role: 'student'}
+Home.tsx:26 Received User Data: {}
+Home.tsx:28 Id: undefined
+Home.tsx:15 Props User Data:  {props: {…}}
+Home.tsx:16 Props Data:  undefined
+Home.tsx:17 {_id: '663361945e8efc55b1ed5eec', email: 'irtiqa@gmail.com', password: 'hello', role: 'student'}
+Home.tsx:26 Received User Data: {}
+Home.tsx:28 Id: undefined
+Home.tsx:34  User ID is not available. 
+    at Home (http://localhost:5173/src/Components/Home.tsx?t=1714767811190:25:20)
+    at RenderedRoute (http://localhost:5173/node_modules/.vite/deps/react-router-dom.js?v=c0faf2e3:3653:5)
+    at Routes (http://localhost:5173/node_modules/.vite/deps/react-router-dom.js?v=c0faf2e3:4088:5)
+    at Router (http://localhost:5173/node_modules/.vite/deps/react-router-dom.js?v=c0faf2e3:4031:15)
+    at BrowserRouter (http://localhost:5173/node_modules/.vite/deps/react-router-dom.js?v=c0faf2e3:4774:5)
+    at App (http://localhost:5173/src/App.tsx?t=1714767594920:26:35)
+overrideMethod @ console.js:273
+fetchData @ Home.tsx:34
+(anonymous) @ Home.tsx:52
+commitHookEffectListMount @ react-dom.development.js:23189
+commitPassiveMountOnFiber @ react-dom.development.js:24965
+commitPassiveMountEffects_complete @ react-dom.development.js:24930
+commitPassiveMountEffects_begin @ react-dom.development.js:24917
+commitPassiveMountEffects @ react-dom.development.js:24905
+flushPassiveEffectsImpl @ react-dom.development.js:27078
+flushPassiveEffects @ react-dom.development.js:27023
+(anonymous) @ react-dom.development.js:26808
+workLoop @ scheduler.development.js:266
+flushWork @ scheduler.development.js:239
+performWorkUntilDeadline @ scheduler.development.js:533
+Show 12 more frames
+Show less
+Home.tsx:34  User ID is not available.
+overrideMethod @ console.js:273
+fetchData @ Home.tsx:34
+(anonymous) @ Home.tsx:52
+commitHookEffectListMount @ react-dom.development.js:23189
+invokePassiveEffectMountInDEV @ react-dom.development.js:25193
+invokeEffectsInDev @ react-dom.development.js:27390
+commitDoubleInvokeEffectsInDEV @ react-dom.development.js:27369
+flushPassiveEffectsImpl @ react-dom.development.js:27095
+flushPassiveEffects @ react-dom.development.js:27023
+(anonymous) @ react-dom.development.js:26808
+workLoop @ scheduler.development.js:266
+flushWork @ scheduler.development.js:239
+performWorkUntilDeadline @ scheduler.development.js:533
+Show 11 more frames
+Show less
+Home.tsx:15 Props User Data:  {props: {…}}
+Home.tsx:16 Props Data:  undefined
+Home.tsx:17 {_id: '663361945e8efc55b1ed5eec', email: 'irtiqa@gmail.com', password: 'hello', role: 'student'}
+Home.tsx:26 Received User Data: {_id: '663361945e8efc55b1ed5eec', email: 'irtiqa@gmail.com', password: 'hello', role: 'student'}
+Home.tsx:28 Id: 663361945e8efc55b1ed5eec
+Home.tsx:15 Props User Data:  {props: {…}}
+Home.tsx:16 Props Data:  undefined
+Home.tsx:17 {_id: '663361945e8efc55b1ed5eec', email: 'irtiqa@gmail.com', password: 'hello', role: 'student'}
+Home.tsx:26 Received User Data: {_id: '663361945e8efc55b1ed5eec', email: 'irtiqa@gmail.com', password: 'hello', role: 'student'}
+Home.tsx:28 Id: 663361945e8efc55b1ed5eec
+Home.tsx:38 Id: 663361945e8efc55b1ed5eec
+Home.tsx:40 Before Fetch: 
+Home.tsx:44 After Fetch:
+Home.tsx:45 Response:  {_id: '66348199c574b24249ff50e7', fypTitle: 'AI-Powered Health Care Recommendation System', Members: Array(3), Supervisor: 'Dr. Adnan Tariq', user: {…}}
+Home.tsx:15 Props User Data:  {props: {…}}
+Home.tsx:16 Props Data:  undefined
+Home.tsx:17 {_id: '663361945e8efc55b1ed5eec', email: 'irtiqa@gmail.com', password: 'hello', role: 'student'}
+Home.tsx:26 Received User Data: {_id: '663361945e8efc55b1ed5eec', email: 'irtiqa@gmail.com', password: 'hello', role: 'student'}
+Home.tsx:28 Id: 663361945e8efc55b1ed5eec
+Home.tsx:15 Props User Data:  {props: {…}}props: {_id: '663361945e8efc55b1ed5eec', email: 'irtiqa@gmail.com', password: 'hello', role: 'student'}[[Prototype]]: Objectconstructor: ƒ Object()hasOwnProperty: ƒ hasOwnProperty()isPrototypeOf: ƒ isPrototypeOf()propertyIsEnumerable: ƒ propertyIsEnumerable()toLocaleString: ƒ toLocaleString()toString: ƒ toString()valueOf: ƒ valueOf()__defineGetter__: ƒ __defineGetter__()__defineSetter__: ƒ __defineSetter__()__lookupGetter__: ƒ __lookupGetter__()__lookupSetter__: ƒ __lookupSetter__()__proto__: (...)get __proto__: ƒ __proto__()set __proto__: ƒ __proto__()
+Home.tsx:16 Props Data:  undefined
+Home.tsx:17 {_id: '663361945e8efc55b1ed5eec', email: 'irtiqa@gmail.com', password: 'hello', role: 'student'}
+Home.tsx:26 Received User Data: {_id: '663361945e8efc55b1ed5eec', email: 'irtiqa@gmail.com', password: 'hello', role: 'student'}
+Home.tsx:28 Id: 663361945e8efc55b1ed5eec
+Home.tsx:78 Skipping writing data. <p> elements already exist in div "card2".

@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import NavbarMenu from "../Navbar";
+import NavbarMenu from "./Navbar";
 import "./PastFYPs.css";
 import Table from "react-bootstrap/Table";
 import TextField from "@mui/material/TextField";
 
-const PastFYPs = () => {
+const PastFYPs = ({ _id, email, password, role }) => {
   const [searchTerm, setSearchTerm] = useState("");
 
   const FYPData = [
@@ -86,7 +86,7 @@ const PastFYPs = () => {
     <>
       <div className="HomeDiv">
         <div className="navbarFYPs">
-          <NavbarMenu />
+          <NavbarMenu _id={_id} email={email} role={role} />
         </div>
 
         <div className="titleHome">

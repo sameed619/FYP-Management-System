@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const {User,Project} = require('../models/User'); 
+const {User,Project,Proposal,Report,Document,Supervisor} = require('../models/User'); 
 router.get('/data/:userId', async (req, res) => {
     console.log('Its here in GET PROJECT DETAILS');
     console.log('Request Params:', req.params); // Log all parameters

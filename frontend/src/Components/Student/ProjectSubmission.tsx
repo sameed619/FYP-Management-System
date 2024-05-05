@@ -1,4 +1,4 @@
-import NavbarMenu from "../Navbar";
+import NavbarMenu from "./Navbar";
 import "./ProjectSubmission.css";
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
@@ -99,7 +99,7 @@ const ProjectSubmission = ({ _id, email, password, role }) => {
   }
   return (
     <>
-      <NavbarMenu />
+      <NavbarMenu _id={_id} email={email} role={role} />
 
       <div className="Div-ProposalSubmission">
         <div className="title-ProposalSubmission">

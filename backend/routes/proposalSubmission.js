@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const {User,Project,Proposal} = require('../models/User'); 
+const {User,Project,Proposal,Report,Document,Supervisor} = require('../models/User'); 
 
 router.post('/submitForm', async (req, res) => {
 

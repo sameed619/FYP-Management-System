@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const {User,Project,Proposal,Report} = require('../models/User'); 
+const {User,Project,Proposal,Report,Document,Supervisor} = require('../models/User'); 
 
 router.post('/submitForm', async (req, res) => {
 
@@ -9,22 +9,23 @@ router.post('/submitForm', async (req, res) => {
     const postData = req.body; // Access the data sent in the request body
     console.log('Received data:', postData);
 
-
     try {
-      // Extract form data from request body
       const { title, description, reportFile, user } = postData;
-      //console.log('Proposal Submission ROUTE Req Body: ' , req.body);
-        
-      const currentDate = new Date();
-      const startOfWeek = new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate() - currentDate.getDay());
-      const endOfWeek = new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate() + (6 - currentDate.getDay()));
 
-      console.log('currentDate: ' , currentDate);
-      console.log('start: ' , startOfWeek);
-      console.log('end: ' , endOfWeek);
 
-      
-      
+      const currentDate = new Date().toLocaleString('en-US', { timeZone: 'Asia/Karachi' });
+const currentDateTime = new Date(currentDate);
+const currentDayOfMonth = currentDateTime.getDate();
+
+// Calculate start and end of the week based on the corrected current date
+const startOfWeek = new Date(currentDateTime.getFullYear(), currentDateTime.getMonth(), currentDayOfMonth - currentDateTime.getDay());
+const endOfWeek = new Date(currentDateTime.getFullYear(), currentDateTime.getMonth(), currentDayOfMonth + (6 - currentDateTime.getDay()));
+
+console.log('currentDate:', currentDateTime.toLocaleString()); // Output the corrected current date and time in PKT
+console.log('startOfWeek:', startOfWeek.toLocaleString()); // Output the start of the week in PKT
+console.log('endOfWeek:', endOfWeek.toLocaleString()); // Output the end of the week in PKT
+
+  
       const existingReport = await Report.findOne({
         user,
         dateSubmitted: { $gte: startOfWeek, $lte: endOfWeek },
@@ -37,12 +38,13 @@ router.post('/submitForm', async (req, res) => {
       var status_Check = false;
 
       if (existingReport) {
-        status_Check = false
-        return res.status(400).json({ message: "You have already submitted a report for this week" }, status_Check);
+        status_Check = false;
+        return res.status(400).json({ message: "You have already submitted a report for this week" , status_Check});
       }
       else{
         status_Check = true;
         dateSubmitted =  new Date();
+        console.log('Date Submitted: ' , dateSubmitted);
         const newReport = new Report({
             title,
             description,

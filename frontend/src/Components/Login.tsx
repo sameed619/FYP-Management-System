@@ -3,7 +3,7 @@ import Form from "react-bootstrap/Form";
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import logo from '../assets/logo.png';
+import logo from "../assets/logo.png";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const Login = ({ handleUserData }) => {
@@ -23,8 +23,13 @@ const Login = ({ handleUserData }) => {
       .then((res) => {
         console.log(res);
         console.log(res.data.user.role);
+        const role = res.data.user.role;
         handleUserData(res.data.user); // Pass user data to parent component
-        navigate("/home",{ state: { user: res.data.user } });
+        if (role.toLowerCase() == "student")
+          navigate("/StudentHome", { state: { user: res.data.user } });
+        else if(role.toLowerCase() == "supervisor")
+          navigate("/SupervisorHome", { state: { user: res.data.user } });
+
       })
       .catch((err) => {
         console.log(err);
