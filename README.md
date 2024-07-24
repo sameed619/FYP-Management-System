@@ -1,5 +1,7 @@
 # Final Year Project Management System
 
+![FYP PORTAL front screen](images/1.png)
+
 ## Introduction
 
 The Final Year Project Management System aims to revolutionize the way educational institutions manage and conduct final year projects. By creating a web-based interface that simplifies the administrative workload and enhances communication among students, supervisors, and committees, this system provides a robust platform to streamline the entire project lifecycle. This project introduces the key functionalities and potential impacts of implementing such a transformative solution in an academic setting.
