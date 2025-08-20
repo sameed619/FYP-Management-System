@@ -1,0 +1,17 @@
+{
+  "builds": [
+    {
+      "src": "FYP-Management-System/package.json",
+      "use": "@vercel/node@2.15.2",
+      "config": {
+        "includeFiles": "FYP-Management-System/**"
+      }
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/FYP-Management-System/dist/$1"
+    }
+  ]
+}
